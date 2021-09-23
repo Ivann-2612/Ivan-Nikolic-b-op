@@ -1,0 +1,23 @@
+.category {
+    padding: 30px;
+    align-items: center;
+    
+    a {
+        text-decoration: none;
+        position: relative;
+        left: 40%;
+        transform: translate(-40%);
+        border: 2px solid transparent;
+        margin-right: 43px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border: 2px solid #001D3D;
+        color: #001D3D;
+        &:hover {
+            background-color: #001D3D;
+            padding: 10px 20px;
+            border: 2px solid #f7fff7;
+            color: #f7fff7;
+        }
+    }
+}
