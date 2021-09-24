@@ -18,7 +18,7 @@ const Nav = () => {
              <ul>
                      <li><Link to="/">Homepage</Link></li>
                  <div className='countries'>
-                     <li><Link to='/alllanguages'>All</Link></li>
+                     <li><Link to='/alllanguages'>DE</Link></li>
                      <li><Link to='/English'>EN</Link></li>
                  </div>
              </ul>

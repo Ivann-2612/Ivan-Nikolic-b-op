@@ -15,7 +15,12 @@
     padding: 5px;
     border-radius: 3px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
+    
+    span {
+        text-transform: uppercase;
+        margin-left: 5px;
+        color: #fca311;
+    }
      p,h4,h3,h5 {
         margin: 0;
         margin: 5px;

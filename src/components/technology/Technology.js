@@ -7,6 +7,7 @@ import './Technology.scss'
 const Technology = () => {
     const [resultOfSearch,setResultOfSearch] = useState()
     const [search,setSearch] = useState('')
+    const [visible,setVisible] = useState(4)
     const placeholder = 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'
     const author_placeholder = 'FOCUS Online'
  
@@ -16,12 +17,19 @@ const Technology = () => {
              setResultOfSearch(res.data.data)
          })
     },[])
+
+    const showMoreBlogs = () => {
+        setVisible(prev => prev + 4)
+    }
+   
+    
     return (
         <div className='wrapper'>
                  <input type='search' placeholder='Looking for a news...' onChange={(e) => {setSearch(e.target.value.toLowerCase())}} />
+                 <div><h2>Technology column</h2></div>
         <div className='card-main'>
             {
-             search.length === 0 ? resultOfSearch?.filter((value) => value?.title.toLowerCase().includes(search)).map(({title,description,image,url,author,published_at}) => { 
+             resultOfSearch === 0 ?  <h1>Match doesn't exist</h1> :  resultOfSearch?.filter((value) => value?.title.toLowerCase().includes(search)).slice(0,visible).map(({title,description,image,url,author,published_at}) => { 
                    return (
                     <div className='card' key={url}>
                     <h3>{title}...</h3>
@@ -31,9 +39,10 @@ const Technology = () => {
                     <h5>{description ? description : title}</h5>
                     <a className='a' href={url}>More...</a>
                     </div>
-                   )})  : <h1>Match doesn't exist</h1> 
+                   )})  
             }
         </div>
+        <button className='load-more-btn-tech' onClick={showMoreBlogs}>Load...</button>
         </div>
     )
 }

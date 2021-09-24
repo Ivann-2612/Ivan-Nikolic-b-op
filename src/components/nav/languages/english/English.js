@@ -6,6 +6,8 @@ import './English.scss'
 
 const English = () => {
     const [sourcesSport,setSourcesSport] = useState([])
+    const [visible,setVisible] = useState(10)
+
     const placeholder = 'https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png'
     const author_placeholder = 'FOCUS Online'
 
@@ -16,10 +18,18 @@ const English = () => {
              setSourcesSport(res.data.data)
          })
     },[])
+
+    const showMoreBlogs = () => {
+        setVisible(prev => prev + 5)
+    }
+
+    let oneNewsArray = sourcesSport?.filter(el => el.language === 'en')
+    
+    console.log(oneNewsArray);
     return (
         <div className='wrapper-en'>
             {
-               sourcesSport?.map(({title,description,image,url,author,published_at}) => { 
+               oneNewsArray?.slice(0,visible).map(({title,description,image,url,author,published_at}) => { 
                    return (
                     <div className='en-card' key={url}>
                      <h3>{title.slice(0,20)}...</h3>
@@ -31,6 +41,7 @@ const English = () => {
                     </div>
                    )}) 
             }
+             <button className='load-more-btn-tech' onClick={showMoreBlogs}>Load...</button>
         </div>
     )
 
