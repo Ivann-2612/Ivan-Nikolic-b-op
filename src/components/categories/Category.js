@@ -17,8 +17,8 @@ const Category = () => {
       <>
         <Router>
           <div className='category'>
-            <Link to={'/sport'}>Sport</Link>
-            <Link to={'/technology'}>Technology</Link>
+            <Link className='link' to={'/sport'}>Sport</Link>
+            <Link className='link' to={'/technology'}>Technology</Link>
             <Switch>
           
             <Route exact path="/sport">
