@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ivan-Nikolic-b-op/static/css/main.b0438a12.chunk.css",
-    "main.js": "/Ivan-Nikolic-b-op/static/js/main.559aff37.chunk.js",
-    "main.js.map": "/Ivan-Nikolic-b-op/static/js/main.559aff37.chunk.js.map",
+    "main.js": "/Ivan-Nikolic-b-op/static/js/main.06c86cc0.chunk.js",
+    "main.js.map": "/Ivan-Nikolic-b-op/static/js/main.06c86cc0.chunk.js.map",
     "runtime-main.js": "/Ivan-Nikolic-b-op/static/js/runtime-main.6d5f9855.js",
     "runtime-main.js.map": "/Ivan-Nikolic-b-op/static/js/runtime-main.6d5f9855.js.map",
     "static/js/2.057d673f.chunk.js": "/Ivan-Nikolic-b-op/static/js/2.057d673f.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.6d5f9855.js",
     "static/js/2.057d673f.chunk.js",
     "static/css/main.b0438a12.chunk.css",
-    "static/js/main.559aff37.chunk.js"
+    "static/js/main.06c86cc0.chunk.js"
   ]
 }
