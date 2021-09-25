@@ -9,6 +9,7 @@ import {
 import HomePage from '../homepage/HomePage'
 import English from '../nav/languages/english/English'
 import AllLanguages from '../nav/languages/alllanguages/AllLanguages'
+import { AiOutlineHome } from "react-icons/ai"
 
 const Nav = () => {
     
@@ -16,7 +17,7 @@ const Nav = () => {
         <Router>
            <nav>
              <ul>
-                     <li><Link to="/">Homepage</Link></li>
+                     <li><Link className='home' to="/"><AiOutlineHome style={{marginTop:'-5px',marginLeft:'-40px'}} size={30} /></Link></li>
                  <div className='countries'>
                      <li><Link to='/alllanguages'>DE</Link></li>
                      <li><Link to='/English'>EN</Link></li>
