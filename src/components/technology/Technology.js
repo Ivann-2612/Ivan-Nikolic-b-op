@@ -37,7 +37,7 @@ const Technology = () => {
                     <h4>{published_at.slice(0,10)}</h4>
                     <img src={image ? image : placeholder} alt={title} />
                     <h5>{description ? description : title}</h5>
-                    <a className='a' href={url}>More...</a>
+                    <a target="_blank"  rel="noreferrer" className='a' href={url}>More...</a>
                     </div>
                    )})  
             }

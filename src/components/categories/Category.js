@@ -10,6 +10,7 @@ import {
   } from "react-router-dom"
 
 
+
 const Category = () => {
     
    
@@ -20,14 +21,12 @@ const Category = () => {
             <Link className='link' to={'/sport'}>Sport</Link>
             <Link className='link' to={'/technology'}>Technology</Link>
             <Switch>
-          
-            <Route exact path="/sport">
-              <Sport />
-            </Route> 
-           
-            <Route exact path="/technology">
-              <Technology />
-            </Route>             
+                <Route exact path="/sport">
+                  <Sport />
+                </Route> 
+                <Route exact path="/technology">
+                  <Technology />
+                </Route>           
         </Switch>
         </div>
         </Router>
