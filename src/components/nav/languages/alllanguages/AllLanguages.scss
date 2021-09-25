@@ -1,14 +1,35 @@
+.input {
+    outline: none;
+    border: 2px solid #001d3d;
+    padding: 8px 10px;
+    width: 250px;
+    border-radius: 3px;
+    position: absolute;
+    top: 23.5%;
+    left: 2.6%;
+    background-color: transparent;
+    color: #121212;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    &::placeholder {
+        color: #121212;
+    }
+
+} 
 .wrapper-all {
-    background-color: #f1f5f8;
-    margin-top: 60px;
+    margin-top: 28px;
     display: flex;
     padding: 5px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    
     .all-card:nth-child(3n + 1){
         width: 300px;
+        background-color: #cbbdff;
+    }
+    .all-card:nth-child(3n + 2){
+        background-color: #fde2e4;
     }
     .all-card {
     width: 225px;

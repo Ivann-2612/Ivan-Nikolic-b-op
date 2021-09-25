@@ -13,7 +13,7 @@ const Sport = () => {
  
     useEffect(() => {
         gettAllSportNews().then(res => {
-             //console.log(res.data)
+             //console.log(res.data.data)
              setResultOfSearch(res.data.data)
          })
     },[])
@@ -21,16 +21,24 @@ const Sport = () => {
     const showMoreBlogs = () => {
         setVisible(prev => prev + 4)
     }
-  
-//      let array = resultOfSearch.map(el => el.published_at)
+    // const array = resultOfSearch.map(el => new Date(el.published_at).toJSON().slice(0,10).replace(/-/g,'/'));
+
+    // const sortedAsc = () => {
+    //  const sort = array.sort((a,b) => a - b, 0)
+    //  console.log(sort);
+    // }
+    // const sortedDesc = () => {
+    //     const sort = array.sort((a,b) => b - a, 0)
+    //     console.log(sort);
+    //    }
  
-//  console.log(array);
    
     return (
         <div>
+            {/* <button className='btn-asc' onClick={() => sortedAsc()}>Asc</button>
+        <button className='btn-desc' onClick={() => sortedDesc()}>Desc</button> */}
          <input type='search' placeholder='Looking for a news...' onChange={(e) => {setSearch(e.target.value.toLowerCase())}} />
         <div><h2>Sport column</h2></div>
-        {/* <button type='button' onClick={sort}>Sort</button> */}
         <div className='card-main'>
             {
              resultOfSearch?.filter((value) => value?.title.toLowerCase().includes(search)).slice(0,visible).map(({title,description,image,url,author,published_at}) => { 
@@ -42,7 +50,7 @@ const Sport = () => {
                         <h4>{published_at.slice(0,10)}</h4>
                        
                         <h5>{description.slice(0,330) ? description.slice(0,330) : title}</h5>
-                        <a target="_blank"  rel="noreferrer" className='a' href={url}>More...</a>
+                        <a target="_blank"  rel="noreferrer" className='a' href={url}>More &#187;</a>
                     </div>
                    )}) 
             }

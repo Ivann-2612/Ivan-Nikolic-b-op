@@ -1,3 +1,4 @@
+
 h2 {
     text-align: center;
     font-size: 38px;
@@ -8,7 +9,7 @@ h2 {
 .load-more-btn-tech{
     margin: 30px;
     position: relative;
-    left: 50%;
+    left: 47.4%;
     transform: translate(-50%);
     padding: 8px 30px;
     width: 270px;
@@ -48,6 +49,7 @@ h2 {
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
+                background-position: center;
 
             }
             h5 {

@@ -6,10 +6,49 @@ h2 {
 .load-more-btn{
     margin: 30px;
     position: relative;
-    left: 50%;
+    left: 47.4%;
     transform: translate(-50%);
     padding: 8px 30px;
     width: 270px;
+    background-color: #ffb703;
+    outline: none;
+    border: 3px solid #121212;
+    font-size: 18px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    &:hover {
+        background-color: #121212;
+        color: #ffb703;
+        transition: 300ms;
+    }
+}    
+
+.btn-asc{
+    margin: 29px;
+    position: relative;
+    left: 91%;
+    top: 47%;
+    transform: translate(-50%,139%);
+    padding: 3px;
+    width: 50px;
+    background-color: #ffb703;
+    outline: none;
+    border: 3px solid #121212;
+    font-size: 18px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    &:hover {
+        background-color: #121212;
+        color: #ffb703;
+        transition: 300ms;
+    }
+}
+.btn-desc{
+    margin: 29px;
+    position: relative;
+    left: 88%;
+    top: 47%;
+    transform: translate(-50%,139%);
+    padding: 3px;
+    width: 50px;
     background-color: #ffb703;
     outline: none;
     border: 3px solid #121212;
@@ -138,7 +177,7 @@ h2 {
     width: 400px;
     height: 500px;
     color: #f7fff7;
-    background-color: #bd1e66;
+    background-color: #b63f4f;
 }
 .card-main .card:nth-child(5) {
     width: 750px;

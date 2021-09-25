@@ -32,12 +32,12 @@ const Technology = () => {
              resultOfSearch === 0 ?  <h1>Match doesn't exist</h1> :  resultOfSearch?.filter((value) => value?.title.toLowerCase().includes(search)).slice(0,visible).map(({title,description,image,url,author,published_at}) => { 
                    return (
                     <div className='card' key={url}>
+                    <img src={image ? image : placeholder} alt={title} />
                     <h3>{title}...</h3>
                     <p>{author ? author : author_placeholder}</p>
                     <h4>{published_at.slice(0,10)}</h4>
-                    <img src={image ? image : placeholder} alt={title} />
                     <h5>{description ? description : title}</h5>
-                    <a target="_blank"  rel="noreferrer" className='a' href={url}>More...</a>
+                    <a target="_blank"  rel="noreferrer" className='a' href={url}>More &#187;</a>
                     </div>
                    )})  
             }
