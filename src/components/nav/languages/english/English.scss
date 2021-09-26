@@ -1,65 +1,71 @@
 .input {
-    outline: none;
-    border: 2px solid #001d3d;
-    padding: 8px 10px;
-    width: 250px;
-    border-radius: 3px;
-    position: absolute;
-    top: 15.5%;
-    left: 2.6%;
-    background-color: transparent;
+  outline: none;
+  border: 2px solid #001d3d;
+  padding: 8px 10px;
+  width: 250px;
+  border-radius: 3px;
+  position: absolute;
+  top: 15.5%;
+  left: 2.6%;
+  background-color: transparent;
+  color: #121212;
+  caret-color: #ffb703;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  &::placeholder {
     color: #121212;
-    caret-color: #FFB703;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    &::placeholder {
-        color: #121212;
-    }
-
-} 
+  }
+}
 .wrapper-en {
-    margin-top: 28px;
-    display: flex;
-    padding: 5px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-.en-card:nth-child(3n + 1){
-        width: 300px;
-        background-color: bisque;
-    }
-    .en-card:nth-child(3n + 2){
-        background-color: azure;
-    }
-    .en-card {
+  margin-top: 28px;
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  .en-card:nth-child(3n + 1) {
+    width: 300px;
+    background-color: bisque;
+  }
+  .en-card:nth-child(3n + 2) {
+    background-color: azure;
+  }
+  .en-card {
     width: 225px;
     height: 315px;
     margin: 10px;
     position: relative;
     padding: 5px;
     border-radius: 3px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    
-     p,h4,h3,h5 {
-        margin: 0;
-        margin: 5px;
-        width: 100%;
-        }
-        h5 {
-            font-weight: normal;
-        }
-        img {
-            width: 100%;
-            object-fit: cover;
-            height: 150px;
-        }
-        a {
-            position: absolute;
-            left: 70%;
-            top: 91%;
-            text-decoration: none;
-            color: blue;
-        }
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    &:hover {
+      opacity: 0.8;
+      transition: 200ms;
     }
-   
+    p,
+    h4,
+    h3,
+    h5 {
+      margin: 0;
+      margin: 5px;
+      width: 100%;
+    }
+    h5 {
+      font-weight: normal;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 150px;
+    }
+    a {
+      position: absolute;
+      left: 70%;
+      top: 91%;
+      text-decoration: none;
+      color: blue;
+    }
+  }
 }

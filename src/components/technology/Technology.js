@@ -2,8 +2,9 @@ import React from "react";
 import { gettAllTechnologyNews } from "../../service";
 import { useState, useEffect } from "react";
 import "./Technology.scss";
-import { TiArrowSortedDown } from "react-icons/ti"
-import { TiArrowSortedUp } from 'react-icons/ti'
+import { TiArrowSortedDown } from "react-icons/ti";
+import { TiArrowSortedUp } from "react-icons/ti";
+import TechnologyLeftSide from "./TecnologyLeftSide";
 
 const Technology = () => {
   const [resultOfSearch, setResultOfSearch] = useState();
@@ -15,7 +16,6 @@ const Technology = () => {
 
   useEffect(() => {
     gettAllTechnologyNews().then((res) => {
-      //console.log(res.data)
       setResultOfSearch(res.data.data);
     });
   }, []);
@@ -24,19 +24,23 @@ const Technology = () => {
     setVisible((prev) => prev + 4);
   };
   const sortedAsc = () => {
-    resultOfSearch.sort((a,b) => a - b)
-   }
-   const sortedDesc = () => {
-       resultOfSearch.sort((a,b) => b - a)
-      }
+    resultOfSearch.sort((a, b) => a - b);
+  };
+  const sortedDesc = () => {
+    resultOfSearch.sort((a, b) => b - a);
+  };
   const handleSearchOnChange = (e) => {
     setSearch(e.target.value);
   };
 
   return (
     <div className="wrapper">
-        <button className='btn-asc' onClick={() => sortedAsc()}><TiArrowSortedDown/></button>
-        <button className='btn-desc' onClick={() => sortedDesc()}><TiArrowSortedUp/></button>
+      <button className="btn-asc" onClick={() => sortedAsc()}>
+        <TiArrowSortedDown />
+      </button>
+      <button className="btn-desc" onClick={() => sortedDesc()}>
+        <TiArrowSortedUp />
+      </button>
       <input
         type="search"
         placeholder="Looking for a news..."
@@ -44,6 +48,9 @@ const Technology = () => {
       />
       <div>
         <h2>Technology column</h2>
+      </div>
+      <div className="right-side">
+        <TechnologyLeftSide />
       </div>
       <div className="card-main">
         {resultOfSearch === 0 ? (

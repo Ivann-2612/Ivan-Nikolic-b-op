@@ -1,26 +1,23 @@
-import axios from 'axios'
+import axios from "axios";
 
-const KEY = '0a81896d93846d9f7ba4e39567af69f1'
-// c27280d79ef611f61af7059d96f7f614   43a4d7553f56245b96fc070d6b777809
-const ALL_TECHNOLOGY_NEWS = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=technology`
-const ALL_SPORT_NEWS = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports`
+const KEY = "41cdaee25c853ae6ae70ef661ebe626d";
 
-const TOP_NEWS_EN = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports, technology&languages= -de,es,fr,it,en,nl`
-const TOP_NEWS_ALL = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports, technology&country= en `
+const ALL_TECHNOLOGY_NEWS = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=technology`;
+const ALL_SPORT_NEWS = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports`;
 
-
-
+const TOP_NEWS_EN = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports, technology&languages= -de,es,fr,it,en,nl`;
+const TOP_NEWS_ALL = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports, technology&country= en `;
 
 export const gettAllTechnologyNews = () => {
-    return axios.get(ALL_TECHNOLOGY_NEWS)
-}
+  return axios.get(ALL_TECHNOLOGY_NEWS);
+};
 export const gettAllSportNews = () => {
-    return axios.get(ALL_SPORT_NEWS)
-}
-export const getTopEnNews = () =>  {
-    return axios.get(TOP_NEWS_EN)
-}
+  return axios.get(ALL_SPORT_NEWS);
+};
+export const getTopEnNews = () => {
+  return axios.get(TOP_NEWS_EN);
+};
 
-export const getAllNews = () =>  {
-    return axios.get(TOP_NEWS_ALL)
-}
+export const getAllNews = () => {
+  return axios.get(TOP_NEWS_ALL);
+};

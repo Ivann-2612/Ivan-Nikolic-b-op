@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import "./AllLanguages.scss";
 
 const AllLanguages = () => {
-
   const [sourcesSport, setSourcesSport] = useState([]);
   const [visible, setVisible] = useState(10);
   const [search, setSearch] = useState("");
@@ -14,27 +13,34 @@ const AllLanguages = () => {
 
   useEffect(() => {
     getAllNews().then((res) => {
-      //console.log(res.data.data)
       setSourcesSport(res.data.data);
     });
   }, []);
+
+  const handleSearchOnChange = (e) => {
+    setSearch(e.target.value);
+  };
 
   const showMoreBlogs = () => {
     setVisible((prev) => prev + 5);
   };
 
   const sortedAsc = () => {
-    sourcesSport.sort((a,b) => a - b)
-     console.log('right');
+ sourcesSport.sort(function(a,b) {
+      return new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+    });
   };
   const sortedDesc = () => {
-    sourcesSport.sort((a,b) => b - a).reverse()
-      console.log('click');
+    sourcesSport.map(item => item.published_at.slice(0,10)).sort((a,b) => b-a)
+      console.log( sourcesSport.map(item => item.published_at.slice(0,10)).sort((a,b) => b-a));
   };
-  const handleSearchOnChange = (e) => {
-      setSearch(e.target.value)
-  }
-console.log(sourcesSport,'1');
+  // let isDescending = 0;
+  // sourcesSport.sort((a, b) =>
+  //   isDescending
+  //     ? new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+  //     : new Date(a.published_at).getTime() - new Date(b.published_at).getTime()
+  // );
+
   return (
     <>
       <div>
@@ -44,11 +50,18 @@ console.log(sourcesSport,'1');
           placeholder="Looking for a news..."
           onChange={handleSearchOnChange}
         />
-
-        <button type='button' className="btn-asc" onClick={sortedAsc}>
+        <button
+          type="button"
+          className="btn-asc"
+          onClick={sortedAsc}
+        >
           &#11205;
         </button>
-        <button type='button' className="btn-desc" onClick={sortedDesc}>
+        <button
+          type="button"
+          className="btn-desc"
+          onClick={sortedDesc}
+        >
           &#11206;
         </button>
       </div>
@@ -66,22 +79,20 @@ console.log(sourcesSport,'1');
               published_at,
               language,
             }) => (
-                <div className="all-card" key={url}>
+              <div className="all-card" key={url}>
                 <h3>{title.slice(0, 20)}...</h3>
                 <p>
-                  {author || author_placeholder} &nbsp; &nbsp;
-                  &nbsp;Lang: <span>{language}</span>
+                  {author || author_placeholder} &nbsp; &nbsp; &nbsp;Lang:{" "}
+                  <span>{language}</span>
                 </p>
                 <h4>{published_at.slice(0, 10)}</h4>
                 <img src={image || placeholder} alt={title} />
-                <h5>
-                  {description.slice(0, 60) || title}
-                </h5>
+                <h5>{description.slice(0, 60) || title}</h5>
                 <a target="_blank" rel="noreferrer" href={url}>
                   More &#187;
                 </a>
               </div>
-            )            
+            )
           )}
         <button className="load-more-btn-tech" onClick={showMoreBlogs}>
           Load...
