@@ -6,8 +6,20 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Sen', sans-serif;
   background-color: #f7fff1;
 }
 .main-section {
   margin: 0;
+}
+::-webkit-scrollbar {
+  width: 18px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #FFB703;
+}
+::-webkit-scrollbar-track {
+  background-color: #f7fff7;
+  border:1px solid black;
+  
 }

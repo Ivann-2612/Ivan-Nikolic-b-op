@@ -1,3 +1,14 @@
+marquee {
+  color:#ffb703;
+    background-color:#121212;
+    text-shadow: 0 0 20px rgba(198,28,39,0.8), 0 0 0 black;
+    font-family:'Sen', sans-serif;
+  letter-spacing: 2.5px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 3px 10px;
+
+}
 .input-en {
   outline: none;
   border: 2px solid #001d3d;
@@ -5,8 +16,8 @@
   width: 250px;
   border-radius: 3px;
   position: absolute;
-  top: 15.5%;
-  left: 1.1%;
+  top: 14.8%;
+  left: 0.5%;
   background-color: #f1f5f8;
   color: #121212;
   caret-color: #ffb703;

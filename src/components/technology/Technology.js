@@ -65,7 +65,7 @@ const Technology = () => {
                 <h3>{title}...</h3>
                 <p>{author || author_placeholder}</p>
                 <h4>{published_at.slice(0, 10)}</h4>
-                <h5>{description || title}</h5>
+                <h6>{description || title}</h6>
                 <a target="_blank" rel="noreferrer" className="a" href={url}>
                   More &#187;
                 </a>

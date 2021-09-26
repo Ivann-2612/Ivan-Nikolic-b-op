@@ -31,10 +31,9 @@ const AllLanguages = () => {
     });
   };
   const sortedDesc = () => {
-    sourcesSport.map(item => item.published_at.slice(0,10)).sort((a,b) => b-a)
-      console.log( sourcesSport.map(item => item.published_at.slice(0,10)).sort((a,b) => b-a));
+    console.log(setSourcesSport(sourcesSport));
   };
-  // let isDescending = 0;
+  // let isDescending = 1;
   // sourcesSport.sort((a, b) =>
   //   isDescending
   //     ? new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
@@ -66,6 +65,7 @@ const AllLanguages = () => {
         </button>
       </div>
       <div className="wrapper-all">
+      <marquee scrollamount='8'>The best news in the world</marquee>
         {sourcesSport
           ?.filter((value) => value?.title.toLowerCase().includes(search))
           .slice(0, visible)

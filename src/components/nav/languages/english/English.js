@@ -7,6 +7,7 @@ const English = () => {
   const [sourcesSport, setSourcesSport] = useState([]);
   const [visible, setVisible] = useState(10);
   const [resultOfSearch, setResultOfSearch] = useState();
+  const [isSorted, setIsSorted] = useState([])
   const [search, setSearch] = useState("");
   const placeholder =
     "https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png";
@@ -16,28 +17,32 @@ const English = () => {
     getTopEnNews().then((res) => {
       setSourcesSport(res.data.data);
       setResultOfSearch(res.data.data);
+      setIsSorted(res.data.data)
     });
   }, []);
 
   const showMoreBlogs = () => {
     setVisible((prev) => prev + 5);
   };
+  const handleSearchOnChange = (e) => {
+      setSearch(e.target.value);
+    };
 
-  const array = sourcesSport.map((el) =>
+  const array = isSorted.map((el) =>
     new Date(el.published_at).toJSON().slice(0, 10).replace(/-/g, "/")
   );
 
   const sortedAsc = () => {
-    const sort = array.sort((a, b) => a.published_at - b.published_at);
-    return sort;
+     array.sort((a, b) => a - b);
+    console.log(array);
+    return array
   };
   const sortedDesc = () => {
-    const sort = array.sort((a, b) => b.published_at - a.published_at);
-    return sort;
+    array.reverse()
+    console.log(array);
+    return array
   };
-  const handleSearchOnChange = (e) => {
-    setSearch(e.target.value);
-  };
+ 
   return (
     <>
       <div>
@@ -55,6 +60,7 @@ const English = () => {
         </button>
       </div>
       <div className="wrapper-en">
+      <marquee scrollamount='8'>The best news in the world</marquee>
         {resultOfSearch
           ?.filter((value) => value?.title.toLowerCase().includes(search))
           .slice(0, visible)

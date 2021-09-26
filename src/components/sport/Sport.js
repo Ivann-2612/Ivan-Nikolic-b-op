@@ -62,13 +62,13 @@ const Sport = () => {
           .map(({ title, description, image, url, author, published_at }) => (
             <div className="card" key={url}>
               <img
-                src={image || image === undefined ? image : placeholder}
+                src={image || placeholder}
                 alt={title}
               />
               <h3>{title.slice(0, 70)}...</h3>
               <p>{author || author_placeholder}</p>
               <h4>{published_at.slice(0, 10)}</h4>
-              <h5>{description.slice(0, 330) || title}</h5>
+              <h6>{description.slice(0, 330) || title}</h6>
               <a target="_blank" rel="noreferrer" className="a" href={url}>
                 More &#187;
               </a>
