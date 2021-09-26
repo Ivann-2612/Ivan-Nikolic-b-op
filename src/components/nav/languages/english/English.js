@@ -42,7 +42,7 @@ const English = () => {
     <>
       <div>
         <input
-          className="input"
+          className="input-en"
           type="search"
           placeholder="Looking for a news..."
           onChange={handleSearchOnChange}
