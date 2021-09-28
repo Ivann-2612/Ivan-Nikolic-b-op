@@ -27,19 +27,15 @@ const AllLanguages = () => {
 
   const sortedAsc = () => {
  sourcesSport.sort(function(a,b) {
+  
       return new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
     });
   };
   const sortedDesc = () => {
     console.log(setSourcesSport(sourcesSport));
   };
-  // let isDescending = 1;
-  // sourcesSport.sort((a, b) =>
-  //   isDescending
-  //     ? new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
-  //     : new Date(a.published_at).getTime() - new Date(b.published_at).getTime()
-  // );
 
+ 
   return (
     <>
       <div>
@@ -49,7 +45,8 @@ const AllLanguages = () => {
           placeholder="Looking for a news..."
           onChange={handleSearchOnChange}
         />
-        <button
+       
+         <button
           type="button"
           className="btn-asc"
           onClick={sortedAsc}
@@ -62,10 +59,10 @@ const AllLanguages = () => {
           onClick={sortedDesc}
         >
           &#11206;
-        </button>
+        </button> 
       </div>
-      <div className="wrapper-all">
-      <marquee scrollamount='8'>The best news in the world</marquee>
+      <span className='h1'>The best news</span>
+      <div className="wrapper-all">         
         {sourcesSport
           ?.filter((value) => value?.title.toLowerCase().includes(search))
           .slice(0, visible)

@@ -5,6 +5,7 @@ import "./Technology.scss";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { TiArrowSortedUp } from "react-icons/ti";
 import TechnologyLeftSide from "./TecnologyLeftSide";
+import TechnologyRightSide from "./TechnologyRightSide";
 
 const Technology = () => {
   const [resultOfSearch, setResultOfSearch] = useState();
@@ -51,6 +52,7 @@ const Technology = () => {
       </div>
       <div className="right-side">
         <TechnologyLeftSide />
+        <TechnologyRightSide />
       </div>
       <div className="card-main">
         {resultOfSearch === 0 ? (

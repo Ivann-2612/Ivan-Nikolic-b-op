@@ -5,6 +5,7 @@ import "./Sport.scss";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { TiArrowSortedUp } from "react-icons/ti";
 import SportLeftSide from "./SportLeftSide";
+import SportRightSide from './SportRightSide'
 
 const Sport = () => {
   const [resultOfSearch, setResultOfSearch] = useState();
@@ -53,6 +54,7 @@ const Sport = () => {
       </div>
       <div className="right-side">
         <SportLeftSide />
+        <SportRightSide />
       </div>
 
       <div className="card-main">

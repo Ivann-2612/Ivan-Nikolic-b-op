@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const KEY = "4f482dad6953e85db7d674abd8194743";
+const KEY = "c07786a16a0e1c9623b2e660ae73d6e8";
 
 const ALL_TECHNOLOGY_NEWS = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=technology`;
 const ALL_SPORT_NEWS = `http://api.mediastack.com/v1/news?access_key=${KEY}&categories=sports`;
