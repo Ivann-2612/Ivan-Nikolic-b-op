@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Ivan-Nikolic-b-op/static/css/main.205c216a.chunk.css",
-    "main.js": "/Ivan-Nikolic-b-op/static/js/main.0c7d956a.chunk.js",
-    "main.js.map": "/Ivan-Nikolic-b-op/static/js/main.0c7d956a.chunk.js.map",
+    "main.css": "/Ivan-Nikolic-b-op/static/css/main.2963caba.chunk.css",
+    "main.js": "/Ivan-Nikolic-b-op/static/js/main.9fc51630.chunk.js",
+    "main.js.map": "/Ivan-Nikolic-b-op/static/js/main.9fc51630.chunk.js.map",
     "runtime-main.js": "/Ivan-Nikolic-b-op/static/js/runtime-main.6d5f9855.js",
     "runtime-main.js.map": "/Ivan-Nikolic-b-op/static/js/runtime-main.6d5f9855.js.map",
-    "static/js/2.33a33157.chunk.js": "/Ivan-Nikolic-b-op/static/js/2.33a33157.chunk.js",
-    "static/js/2.33a33157.chunk.js.map": "/Ivan-Nikolic-b-op/static/js/2.33a33157.chunk.js.map",
+    "static/js/2.1f0158e8.chunk.js": "/Ivan-Nikolic-b-op/static/js/2.1f0158e8.chunk.js",
+    "static/js/2.1f0158e8.chunk.js.map": "/Ivan-Nikolic-b-op/static/js/2.1f0158e8.chunk.js.map",
     "index.html": "/Ivan-Nikolic-b-op/index.html",
-    "static/css/main.205c216a.chunk.css.map": "/Ivan-Nikolic-b-op/static/css/main.205c216a.chunk.css.map",
-    "static/js/2.33a33157.chunk.js.LICENSE.txt": "/Ivan-Nikolic-b-op/static/js/2.33a33157.chunk.js.LICENSE.txt"
+    "static/css/main.2963caba.chunk.css.map": "/Ivan-Nikolic-b-op/static/css/main.2963caba.chunk.css.map",
+    "static/js/2.1f0158e8.chunk.js.LICENSE.txt": "/Ivan-Nikolic-b-op/static/js/2.1f0158e8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6d5f9855.js",
-    "static/js/2.33a33157.chunk.js",
-    "static/css/main.205c216a.chunk.css",
-    "static/js/main.0c7d956a.chunk.js"
+    "static/js/2.1f0158e8.chunk.js",
+    "static/css/main.2963caba.chunk.css",
+    "static/js/main.9fc51630.chunk.js"
   ]
 }
